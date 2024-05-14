@@ -21,10 +21,14 @@ function openNextPage(){
 function createItemEventListener(item){
     item.addEventListener('click', function() {
         let itemId = this.id;
-        switch(itemId) {
-            case 'skills':
-                console.log('skills clicked');
-                break;
-        }
+        pageCases(itemId);
     });
+}
+
+function pageCases(itemId){
+    switch(itemId) {
+        case 'skills':
+            window.location.href = 'skills.html';
+            break;
+    }
 }

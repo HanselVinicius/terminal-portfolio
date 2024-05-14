@@ -1,19 +1,8 @@
-@keyframes blink {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-.blink {
-    animation: blink 1s infinite;
-}
-
 .clickable-text:hover {
     text-decoration: underline;
     color: #ebeeee; 
 }
 
-/* Terminal dropdown styles */
 .dropdown {
     position: relative;
     display: inline-block;
