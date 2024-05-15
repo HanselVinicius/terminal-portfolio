@@ -1,6 +1,6 @@
-export function createItemEventListener(item, pageCases) {
+export function createItemEventListener(item, clickCases) {
     item.addEventListener('click', function() {
         let itemId = this.id;
-        pageCases(itemId);
+        clickCases(itemId);
     });
 }
