@@ -25,7 +25,7 @@ function pageCases(itemId){
             addUspParagraph(contentDiv,dropdown);
             break;
         case 'portfolio':
-            window.location.href = 'terminal-portfolio/skills.html';
+            window.location.href = 'index.html';
             break;
     }
 }
