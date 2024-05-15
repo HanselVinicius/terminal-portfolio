@@ -15,14 +15,14 @@ function pageCases(itemId){
     const spanText = document.getElementById(itemId).textContent;
 
     switch(itemId) {
-        case 'gvd':
+        case 'hard-skills':
             addWrittenParagraph(contentDiv,dropdown,spanText);
-            addGvdParagraph(contentDiv,dropdown,spanText);
+            addHardSkillsParagraph(contentDiv,dropdown,spanText);
             break;
 
-        case 'usp':
+        case 'soft-skills':
             addWrittenParagraph(contentDiv,dropdown,spanText);
-            addUspParagraph(contentDiv,dropdown);
+            addSoftSkillsParagraph(contentDiv,dropdown);
             break;
         case 'portfolio':
             window.location.href = 'index.html';
@@ -30,21 +30,19 @@ function pageCases(itemId){
     }
 }
 
-function addGvdParagraph(contentDiv, dropdown) {
+function addHardSkillsParagraph(contentDiv, dropdown) {
     const experienceParagraph = document.createElement("p");
-    experienceParagraph.textContent = "gvd.text is Under development..."; 
+    experienceParagraph.textContent = "hard-skills.txt is Under development..."; 
     experienceParagraph.classList.add("mb-4");
 
-    
     contentDiv.insertBefore(experienceParagraph, dropdown);
 }
 
-function addUspParagraph(contentDiv, dropdown) {
+function addSoftSkillsParagraph(contentDiv, dropdown) {
     const experienceParagraph = document.createElement("p");
-    experienceParagraph.textContent = "usp.txt is Under development..."; 
+    experienceParagraph.textContent = "soft-skills.txt is Under development..."; 
     experienceParagraph.classList.add("mb-4");
 
-    
     contentDiv.insertBefore(experienceParagraph, dropdown);
 }
 
