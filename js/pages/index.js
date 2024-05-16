@@ -1,5 +1,5 @@
 import { createItemEventListener } from '../utils.js';
-import { addParagraph } from '../paragraph.js';
+import { addParagraph, clearParagraphs } from '../service/paragraph.js';
 
 addEventListener("DOMContentLoaded", (event) => {
     populeYearParagph();
@@ -41,9 +41,8 @@ function clickCases(itemId){
             addParagraph(contentDiv,dropdown,"","user Portfolio %"+spanText);
             window.open('https://www.linkedin.com/in/vinicius-hansel-figueiredo-da-costa-b90b1b220/');
             break;
-        case 'github':
-            addParagraph(contentDiv,dropdown,"","user Portfolio %"+spanText);
-            window.open('https://github.com/HanselVinicius');
+        case 'clear':
+            clearParagraphs();
             break;
     }
 }

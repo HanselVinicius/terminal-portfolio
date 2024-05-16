@@ -15,3 +15,11 @@ function addWrittenParagraph(contentDiv, dropdown,spanText) {
 
     contentDiv.insertBefore(writtenCommand, dropdown);
 }
+
+export function clearParagraphs() {
+    const contentDiv = document.getElementById("content");
+    const paragraphs = contentDiv.querySelectorAll("p");
+    paragraphs.forEach(function(paragraph) {
+        contentDiv.removeChild(paragraph);
+    });
+}

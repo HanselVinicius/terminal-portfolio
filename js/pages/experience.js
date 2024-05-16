@@ -1,5 +1,5 @@
 import {createItemEventListener} from '../utils.js';
-import {addParagraph} from '../paragraph.js';
+import { addParagraph, clearParagraphs } from '../service/paragraph.js';
 
 addEventListener("DOMContentLoaded", (event) => {
     const dropdownItems = document.querySelectorAll('.dropdown-item');
@@ -36,6 +36,9 @@ function clickCases(itemId){
             break;
         case 'portfolio':
             window.location.href = 'index.html';
+            break;
+        case 'clear':
+            clearParagraphs();
             break;
     }
 }
