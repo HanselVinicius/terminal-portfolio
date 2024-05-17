@@ -44,5 +44,21 @@ function clickCases(itemId){
         case 'clear':
             clearParagraphs();
             break;
+        case 'download_curriculum':
+            dowloadCurriculum();
+            break;
+
+    }
+
+    function dowloadCurriculum(){
+        const timezoneOffsetInMinutes = new Date().getTimezoneOffset();
+        const hoursOffset = Math.floor(timezoneOffsetInMinutes / 60);
+        console.log(hoursOffset);
+        const isBrasil = hoursOffset == 3 || hoursOffset == 4 || hoursOffset == 5;
+        if(isBrasil){
+            window.open('https://drive.google.com/file/d/1_cYjWNpXfUIL5MfEpo3rHVFEjgHaneiM/view?usp=drive_link');
+            return;
+        }
+        window.open('https://drive.google.com/file/d/1Nd6P3YPd6iQd9VU6gBxw89AtcfQRqinf/view?usp=drive_link');
     }
 }
